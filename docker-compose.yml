@@ -1,0 +1,9 @@
+version: '3'
+services:
+  browser-server:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+    restart: unless-stopped
